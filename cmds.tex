@@ -1,0 +1,100 @@
+% Acro related
+\newcommand{\AC}[1]{\ac[long-format=\MakeUppercase]{#1}}
+%\newcommand{\ACP}[1]{\acp[long-format=\MakeUppercase]{#1}}
+
+% General utils
+\newcommand\todo[1]{\textcolor{red}{TODO: #1}} % Marks the arg red and prepends TODO
+
+% math abuse
+\newcommand{\arrowright}{$\rightarrow$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\uv}[1]{\hat{\veg{#1}}} % unit vectors
+\newcommand{\sbv}[1]{\uv{e}_{#1}} % standard basis vectors
+\renewcommand{\vec}[1]{\mathsfbfit{#1}} %n-dimensional vector
+
+%\renewcommand{\D}{\mathrm{D}} % 
+\newcommand{\card}[1]{|#1|} % Cardinality of set
+\newcommand{\pnorm}[2]{\left\lVert#1\right\rVert_{#2}} % norm
+
+%\renewcommand{\Set}[1]{\mathcal{#1}}  % set
+%\renewcommand{\Graph}[1]{\mathcal{#1}} % graph
+%\renewcommand{\GraphSub}[1]{\mathcal{\hat{#1}}}  % graph with args
+%\renewcommand{\GraphDef}[1]{\Graph{#1}=(V,E)}  % standard graph def
+
+\newcommand{\bspc}[1]{\{0,1\}^{#1}}
+\newcommand{\eye}[1]{\mat{I}_{#1}}
+\newcommand{\zeros}[2]{\mat{0}_{#1\times #2}}
+%\newcommand{\ones}[2]{\mat{1}_{#1\times #2}}
+\newcommand{\ones}[1]{\mathds{1}_{#1}}
+\newcommand{\stack}[2]{[#1;#2]}
+\newcommand{\iprod}[2]{\langle #1, #2 \rangle}
+
+%\DeclareMathOperator{\tovec}{\mathrm{vec}}
+\DeclareMathOperator{\todiag}{\mathrm{diag}}
+%\DeclareMathOperator{\R}{\mathbb{R}}
+%\newcommand{\T}[0]{\mathrm{T}} 
+%\newcommand{\todiag}{\mathrm{diag}}
+
+\newcommand{\spc}[2]{#1^{#2}}
+\newcommand{\rspc}[1]{\mathbb{R}^#1}
+
+%\newcommand{\T}{^\operatorname{T}}
+\newcommand{\T}{^\intercal}
+\DeclareMathOperator{\Tr}{Tr}
+
+% probaiblity stuff
+\newcommand{\pd}[2]{p_{#2}(#1)}
+\newcommand{\sdf}[2]{#1 \sim #2}
+\newcommand{\seq}[3]{#1_{#2:#3}}
+
+\newcommand{\veg}[1]{\mathbfit{#1}}     % geometrical / physical vectors
+\newcommand{\vet}[1]{\bm{\mathfrak{#1}}}    % I used it for physical vectors with time-dependency
+\newcommand{\rveg}[1]{\bm{ \mathfrak{#1}}}    % random vector
+\newcommand{\mat}[1]{\mathsfbfit{#1}} % n x n-dimensional matrix
+\newcommand{\rmat}[1]{\mathsfbfit{#1}} % random n x n-dimensional matrix
+\newcommand{\ten}[1]{\mathsfbf{#1}} % tensor
+\newcommand{\rten}[1]{\mathsfbf{#1}} % random tensor
+\newcommand{\uv}[1]{\hat{\veg{#1}}} % unit vectors
+\renewcommand{\vec}[1]{\mathsfbfit{#1}} %n-dimensional vector
+\newcommand{\op}[1]{\mathcal{#1}} % operator that takes a scalar-valued function
+\newcommand{\vecop}[1]{\mathbcal{#1}} % operator that takes a vector-valued function
+\newcommand{\mel}[1]{\mathsfit{#1}} 
+\newcommand{\vel}[1]{\mathsfit{#1}}
+\newcommand{\matel}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\vecel}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\inv}[1]{#1^{-1}}
+
+\newcommand{\for}{\quad\mathrm{for}\quad}
+\newcommand{\whr}{\quad\mathrm{where}\quad}
+\newcommand{\mand}{\quad\mathrm{and}\quad}
+
+\newcommand{\nfjacobian}[3]{
+J_{#1}(\vec{u}) = 
+\begin{pmatrix}
+	\frac{\partial #1_1}{\partial #2_1} & \cdots & \frac{\partial #1_1}{\partial #2_#3} \\
+	\vdots  & \ddots & \vdots  \\
+	\frac{\partial #1_#3}{\partial #2_1} & \cdots & \frac{\partial #1_#3}{\partial #2_#3}
+\end{pmatrix}
+}
+
+% complexity
+\newcommand{\bigo}[1]{\mathcal{O}(#1)}
+
+% Absolute and Norm
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother

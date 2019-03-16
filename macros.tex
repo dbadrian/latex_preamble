@@ -1,0 +1,212 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% General
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\todo[1]{\textcolor{red}{TODO: #1}} % Marks the arg red and prepends TODO
+
+\newcommand{\arrowright}{$\rightarrow$} % Use math error in text
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorms etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{hypothesis}{Hypothesis}[section]
+\newtheorem{hypoexp}{Experiment}[hypothesis]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acro / Abbreviation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful for using AC in UPPERCASE titles in e.g., Beamer template
+\newcommand{\AC}[1]{\ac[long-format=\MakeUppercase]{#1}}
+%\newcommand{\ACP}[1]{\acp[long-format=\MakeUppercase]{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% complexity
+\newcommand{\bigo}[1]{\mathcal{O}(#1)}  % Big-O notation
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Machine Learning
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\train}{\mathcal{D_{\mathrm{train}}}}
+\newcommand{\valid}{\mathcal{D_{\mathrm{val}}}}
+\newcommand{\test}{\mathcal{D_{\mathrm{test}}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Placeholder dots with improved styling/shortcut name
+\newcommand*{\tdot}{\makebox[1ex]{\textbf{$\cdot$}}}%
+\newcommand*{\bdot}{\makebox[1ex]{\textbf{$\bullet$}}}%
+
+% Math shortcuts
+\newcommand{\mr}{\mathrm}
+\newcommand{\ms}{\mathsf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\wt}[1]{{\widetilde{#1}}}
+
+%% Vectors, Matrix, Tensors, Arrays
+\newcommand{\vc}[1]{\mathbfit{#1}} % A vector
+\newcommand{\mat}[1]{\mathbfit{#1}} % A matrix
+\newcommand{\ten}[1]{\mathsfbfit{#1}} % A tensor
+
+%% Special vector-types
+\newcommand{\vct}[1]{\bm{ \mathfrak{#1}}} % A vector with temporal dependency
+\newcommand{\uv}[1]{\hat{\vc{#1}}} % a unit vector
+
+%% Special Vectors, Matrices, etc.
+\newcommand{\sbv}[1]{\vc{e}_{#1}} % standard basis vectors
+
+\newcommand{\matI}{\mat I}
+\newcommand{\matJ}{\mat J} % same as an all ones matrix
+\newcommand{\matO}{\mat 0}
+\newcommand{\vecO}{\matO}
+\newcommand{\vecI}{\mathbfsf{1}}
+
+\newcommand{\eye}[1]{\matI_{#1}}
+\newcommand{\zeros}[1]{\matO_{#1}}
+\newcommand{\ones}[1]{\mat{1}_{#1}}
+\newcommand{\onesJ}[1]{\matJ_{#1}}
+
+%% Sets and Graphs
+\newcommand{\set}[1]{#1}  % set
+\newcommand{\graph}[1]{\mathcal{#1}} % graph
+\newcommand{\graphdef}[1]{\graph{#1}=(\set{V},\set{E})}  % standard graph def
+\DeclarePairedDelimiter{\card}{\vert}{{\vert}} % Cardinality of set
+
+
+%% Special Sets
+\newcommand{\R}{\mathbb{R}}  % set of real numbers 
+\newcommand{\N}{\mathbb{N}} % set of natural numbers
+\newcommand{\Z}{\mathbb{Z}} % set of integers
+\newcommand{\Q}{\mathbb{Q}} % set of rational numbers
+\newcommand{\A}{\mathbb{A}} % set of algebraic numbers
+\newcommand{\C}{\mathbb{C}} % set of complex numbers
+\renewcommand{\H}{\mathbb{H}} % set of quaternions
+% \newcommand{\bspc}[1]{\{0,1\}^{#1}}
+
+%% Symbols
+\def\eps{{\epsilon}}
+
+%% LA Operations
+\DeclarePairedDelimiter{\prt}{\left(}{\right)} % parantheses helper
+\newcommand{\iprod}[2]{\langle #1, #2 \rangle} % inner product
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert} % norm
+\newcommand{\pnorm}[2]{\norm{#1}_{#2}} % p-norm (takes arguent)
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil} % ceil
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor} % floor
+\newcommand{\stack}[2]{[#1;#2]} % stacking of vectors
+\DeclareMathOperator{\vecc}{\mathrm{vec}}
+\DeclareMathOperator{\diag}{\mathrm{diag}}
+\newcommand{\todiag}[1]{\diag\prt{#1}} % to diagonal matrix op
+\newcommand{\tovec}[1]{\vecc\prt{#1}} % to vector op
+\DeclareMathOperator{\Tr}{Tr} % trace
+\newcommand{\Trp}[1]{\Tr\prt{#1}} % trace
+\newcommand{\detp}[1]{\det\prt{#1}} % determinant
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+% % Swap the definition of \abs* and \norm*, so that \abs
+% % and \norm resizes the size of the brackets, and the 
+% % starred version does not.
+% \makeatletter
+% \let\oldabs\abs
+% \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+% %
+% \let\oldnorm\norm
+% \def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+% \makeatother
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\DeclareMathOperator{\sign}{sgn}
+\newcommand{\signp}[1]{\sign\prt{#1}}
+
+%% Shortcuts for denoting spaces in practise
+\newcommand{\spc}[2]{\mathbb{spc}^{#2}}
+\newcommand{\rspc}[1]{\R^#1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reference short cuts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\figref}[1]{figure~\ref{#1}}
+\newcommand{\Figref}[1]{Figure~\ref{#1}}
+\newcommand{\figreftwo}[2]{figures \ref{#1} and \ref{#2}}
+\newcommand{\Figreftwo}[2]{Figures \ref{#1} and \ref{#2}}
+\newcommand{\figrefthree}[3]{figures \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Figrefthree}[3]{Figures \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\secref}[1]{section~\ref{#1}}
+\newcommand{\Secref}[1]{Section~\ref{#1}}
+\newcommand{\secreftwo}[2]{sections \ref{#1} and \ref{#2}}
+\newcommand{\Secreftwo}[2]{Sections \ref{#1} and \ref{#2}}
+\newcommand{\secrefthree}[3]{sections \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Secrefthree}[3]{Sections \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\chapref}[1]{chapter~\ref{#1}}
+\newcommand{\Chapref}[1]{Chapter~\ref{#1}}
+\newcommand{\chapreftwo}[2]{chapters \ref{#1} and \ref{#2}}
+\newcommand{\Chapreftwo}[2]{Chapters \ref{#1} and \ref{#2}}
+\newcommand{\chaprefthree}[3]{chapters \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Chaprefthree}[3]{Chapters \ref{#1}, \ref{#2} and \ref{#3}}
+
+\renewcommand{\eqref}[1]{equation~\ref{#1}}  % overwrites the (1)-eqref style
+\newcommand{\Eqref}[1]{Equation~\ref{#1}}
+\newcommand{\eqreftwo}[2]{equations \ref{#1} and \ref{#2}}
+\newcommand{\Eqreftwo}[2]{Equations \ref{#1} and \ref{#2}}
+\newcommand{\eqrefthree}[3]{equations \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Eqrefthree}[3]{Equations \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\algoref}[1]{algorithm~\ref{#1}}
+\newcommand{\Algoref}[1]{Algorithm~\ref{#1}}
+\newcommand{\algoreftwo}[2]{algorithms \ref{#1} and \ref{#2}}
+\newcommand{\Algoreftwo}[2]{Algorithms \ref{#1} and \ref{#2}}
+\newcommand{\algorefthree}[3]{algorithms \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Algorefthree}[3]{Algorithms \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\tabref}[1]{table~\ref{#1}}
+\newcommand{\Tabref}[1]{Table~\ref{#1}}
+\newcommand{\tabreftwo}[2]{tables \ref{#1} and \ref{#2}}
+\newcommand{\Tabreftwo}[2]{Tables \ref{#1} and \ref{#2}}
+\newcommand{\tabrefthree}[3]{tables \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Tabrefthree}[3]{Tables \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\lstref}[1]{listing~\ref{#1}}
+\newcommand{\Lstref}[1]{Listing~\ref{#1}}
+\newcommand{\lstreftwo}[2]{listings \ref{#1} and \ref{#2}}
+\newcommand{\Lstreftwo}[2]{Listings \ref{#1} and \ref{#2}}
+\newcommand{\lstrefthree}[3]{listings \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Lstrefthree}[3]{Listings \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\hyporef}[1]{hypothesis~\ref{#1}}
+\newcommand{\Hyporef}[1]{Hypothesis~\ref{#1}}
+\newcommand{\hyporeftwo}[2]{hypotheses \ref{#1} and \ref{#2}}
+\newcommand{\Hyporeftwo}[2]{Hypotheses \ref{#1} and \ref{#2}}
+\newcommand{\hyporefthree}[3]{hypotheses \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Hyporefthree}[3]{Hypotheses \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\expref}[1]{experiment~\ref{#1}}
+\newcommand{\Expref}[1]{Experiment~\ref{#1}}
+\newcommand{\expreftwo}[2]{experiment \ref{#1} and \ref{#2}}
+\newcommand{\Expreftwo}[2]{Experiment \ref{#1} and \ref{#2}}
+\newcommand{\exprefthree}[3]{experiment \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Exprefthree}[3]{Experiment \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\lemref}[1]{lemma~\ref{#1}}
+\newcommand{\Lemref}[1]{Lemma~\ref{#1}}
+\newcommand{\lemreftwo}[2]{lemma \ref{#1} and \ref{#2}}
+\newcommand{\Lemreftwo}[2]{Lemma \ref{#1} and \ref{#2}}
+\newcommand{\lemrefthree}[3]{lemma \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Lemrefthree}[3]{Lemma \ref{#1}, \ref{#2} and \ref{#3}}
+
+\newcommand{\thmref}[1]{theorem~\ref{#1}}
+\newcommand{\Thmref}[1]{Theorem~\ref{#1}}
+\newcommand{\thmreftwo}[2]{theorem \ref{#1} and \ref{#2}}
+\newcommand{\Thmreftwo}[2]{Theorem \ref{#1} and \ref{#2}}
+\newcommand{\thmrefthree}[3]{theorem \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Thmrefthree}[3]{Theorem \ref{#1}, \ref{#2} and \ref{#3}}

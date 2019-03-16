@@ -1,0 +1,23 @@
+%%% Hyphenation
+% When the default language is english, LaTeX applies a weird hyphenation rules for words with a hyphen:
+% It only split words at the hypen...
+% In particular for long words such as ``dense-discretization'' this is not good
+% With LuaLaTeX we can make exceptions and tell LaTeX where to split these words
+% Does NOT work with pdfLaTeX
+
+\hyphenation{hier-arch-ical 
+	three=di-men-s-ion-al 
+	ill=cond-ition-ed 
+	mul-ti=in-dex 
+	two=di-men-sion-al 
+	fi-ni-te=di-men-si-onal 
+	ri-ght=ha-nd 
+	non=sym-me-tr-ic 
+	se-mi=de-fi-ni-te 
+	we-ll=co-nd-it-ion-ed
+	ma-tr-ix=ve-ct-or
+	so=cal-led
+	we-ll=de-f-in-ed
+	Moo-re=Pen-ro-se
+	ps-eu-do=in-ver-se
+}
