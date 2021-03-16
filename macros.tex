@@ -139,38 +139,87 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reference short cuts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\figref}[1]{figure~\ref{#1}}
-\newcommand{\Figref}[1]{Figure~\ref{#1}}
-\newcommand{\figreftwo}[2]{figures~\ref{#1} and~\ref{#2}}
-\newcommand{\Figreftwo}[2]{Figures~\ref{#1} and~\ref{#2}}
-\newcommand{\figrefthree}[3]{figures~\ref{#1},~\ref{#2} and~\ref{#3}}
-\newcommand{\Figrefthree}[3]{Figures~\ref{#1},~\ref{#2} and~\ref{#3}}
 
-\newcommand{\secref}[1]{section~\ref{#1}}
-\newcommand{\Secref}[1]{Section~\ref{#1}}
-\newcommand{\secreftwo}[2]{sections~\ref{#1} and~\ref{#2}}
-\newcommand{\Secreftwo}[2]{Sections~\ref{#1} and~\ref{#2}}
-\newcommand{\secrefthree}[3]{sections~\ref{#1},~\ref{#2} and~\ref{#3}}
-\newcommand{\Secrefthree}[3]{Sections~\ref{#1},~\ref{#2} and~\ref{#3}}
+\ifbriefref
+    \newcommand{\figlower}{fig.}
+    \newcommand{\figupper}{Fig.}
+    \newcommand{\figlowerp}{fig.}
+    \newcommand{\figupperp}{Fig.}
+    \newcommand{\seclower}{sec.}
+    \newcommand{\secupper}{Sec.}
+    \newcommand{\seclowerp}{sec.}
+    \newcommand{\secupperp}{Sec.}
+    \newcommand{\chaplower}{chap.}
+    \newcommand{\chapupper}{Chap.}
+    \newcommand{\chaplowerp}{chap.}
+    \newcommand{\chapupperp}{Chap.}
+    \newcommand{\eqlower}{eq.}
+    \newcommand{\equpper}{Eq.}
+    \newcommand{\eqlowerp}{eq.}
+    \newcommand{\equpperp}{Eq.}
+\else
+    \newcommand{\figlower}{figure}
+    \newcommand{\figupper}{Figure}
+    \newcommand{\figlowerp}{figures}
+    \newcommand{\figupperp}{Figures}
+    \newcommand{\seclower}{section}
+    \newcommand{\secupper}{Section}
+    \newcommand{\seclowerp}{sections}
+    \newcommand{\secupperp}{Sections}
+    \newcommand{\chaplower}{chapter}
+    \newcommand{\chapupper}{Chapter}
+    \newcommand{\chaplowerp}{chapters}
+    \newcommand{\chapupperp}{Chapters}
+    \newcommand{\eqlower}{equation}
+    \newcommand{\equpper}{Equation}
+    \newcommand{\eqlowerp}{equations}
+    \newcommand{\equpperp}{Equations}
+\fi
 
-\newcommand{\chapref}[1]{chapter~\ref{#1}}
-\newcommand{\Chapref}[1]{Chapter~\ref{#1}}
-\newcommand{\chapreftwo}[2]{chapters~\ref{#1} and~\ref{#2}}
-\newcommand{\Chapreftwo}[2]{Chapters~\ref{#1} and~\ref{#2}}
-\newcommand{\chaprefthree}[3]{chapters~\ref{#1},~\ref{#2} and~\ref{#3}}
-\newcommand{\Chaprefthree}[3]{Chapters~\ref{#1},~\ref{#2} and~\ref{#3}}
+
+\newcommand{\figref}[1]{\figlower~\ref{#1}}
+\newcommand{\Figref}[1]{\figupper~\ref{#1}}
+\newcommand{\figreftwo}[2]{\figlowerp~\ref{#1} and~\ref{#2}}
+\newcommand{\Figreftwo}[2]{\figupperp~\ref{#1} and~\ref{#2}}
+\newcommand{\figrefthree}[3]{\figlowerp~\ref{#1},~\ref{#2} and~\ref{#3}}
+\newcommand{\Figrefthree}[3]{\figupperp~\ref{#1},~\ref{#2} and~\ref{#3}}
+
+\newcommand{\secref}[1]{\seclower~\ref{#1}}
+\newcommand{\Secref}[1]{\secupper~\ref{#1}}
+\newcommand{\secreftwo}[2]{\seclowerp~\ref{#1} and~\ref{#2}}
+\newcommand{\Secreftwo}[2]{\secupperp~\ref{#1} and~\ref{#2}}
+\newcommand{\secrefthree}[3]{\seclowerp~\ref{#1},~\ref{#2} and~\ref{#3}}
+\newcommand{\Secrefthree}[3]{\secupperp~\ref{#1},~\ref{#2} and~\ref{#3}}
+
+\newcommand{\chapref}[1]{\chaplower~\ref{#1}}
+\newcommand{\Chapref}[1]{\chapupper~\ref{#1}}
+\newcommand{\chapreftwo}[2]{\chaplowerp~\ref{#1} and~\ref{#2}}
+\newcommand{\Chapreftwo}[2]{\chapupperp~\ref{#1} and~\ref{#2}}
+\newcommand{\chaprefthree}[3]{\chaplowerp~\ref{#1},~\ref{#2} and~\ref{#3}}
+\newcommand{\Chaprefthree}[3]{\chapupperp~\ref{#1},~\ref{#2} and~\ref{#3}}
+
+\let\oldeqref\eqref
+\renewcommand{\eqref}[1]{\eqlower~\oldeqref{#1}}  % overwrites the (1)-eqref style
+\newcommand{\Eqref}[1]{\equpper~\oldeqref{#1}}
+\newcommand{\eqreftwo}[2]{\eqlowerp~\oldeqref{#1} and~\oldeqref{#2}}
+\newcommand{\Eqreftwo}[2]{\equpperp~\oldeqref{#1} and~\oldeqref{#2}}
+\newcommand{\eqrefthree}[3]{\eqlowerp~\oldeqref{#1},~\oldeqref{#2} and~\oldeqref{#3}}
+\newcommand{\Eqrefthree}[3]{\equpperp~\oldeqref{#1},~\oldeqref{#2} and~\oldeqref{#3}}
+
+\newcommand{\expref}[1]{experiment~\ref{#1}}
+\newcommand{\Expref}[1]{Experiment~\ref{#1}}
+\newcommand{\expreftwo}[2]{experiment \ref{#1} and~\ref{#2}}
+\newcommand{\Expreftwo}[2]{Experiment \ref{#1} and~\ref{#2}}
+\newcommand{\exprefthree}[3]{experiment \ref{#1},~\ref{#2} and~\ref{#3}}
+\newcommand{\Exprefthree}[3]{Experiment \ref{#1},~\ref{#2} and~\ref{#3}}
+
+
 
 \newcommand{\appxref}[1]{appendx~\ref{#1}}
 \newcommand{\Appxref}[1]{Appendix~\ref{#1}}
 
 \newcommand{\supplref}[1]{supplementary materials~\ref{#1}}
 
-\renewcommand{\eqref}[1]{equation~\ref{#1}}  % overwrites the (1)-eqref style
-\newcommand{\Eqref}[1]{Equation~\ref{#1}}
-\newcommand{\eqreftwo}[2]{equations~\ref{#1} and~\ref{#2}}
-\newcommand{\Eqreftwo}[2]{Equations~\ref{#1} and~\ref{#2}}
-\newcommand{\eqrefthree}[3]{equations~\ref{#1},~\ref{#2} and~\ref{#3}}
-\newcommand{\Eqrefthree}[3]{Equations~\ref{#1},~\ref{#2} and~\ref{#3}}
 
 \newcommand{\algoref}[1]{algorithm~\ref{#1}}
 \newcommand{\Algoref}[1]{Algorithm~\ref{#1}}
@@ -199,13 +248,6 @@
 \newcommand{\Hyporeftwo}[2]{Hypotheses~\ref{#1} and~\ref{#2}}
 \newcommand{\hyporefthree}[3]{hypotheses~\ref{#1},~\ref{#2} and~\ref{#3}}
 \newcommand{\Hyporefthree}[3]{Hypotheses~\ref{#1},~\ref{#2} and~\ref{#3}}
-
-\newcommand{\expref}[1]{experiment~\ref{#1}}
-\newcommand{\Expref}[1]{Experiment~\ref{#1}}
-\newcommand{\expreftwo}[2]{experiment \ref{#1} and~\ref{#2}}
-\newcommand{\Expreftwo}[2]{Experiment \ref{#1} and~\ref{#2}}
-\newcommand{\exprefthree}[3]{experiment \ref{#1},~\ref{#2} and~\ref{#3}}
-\newcommand{\Exprefthree}[3]{Experiment \ref{#1},~\ref{#2} and~\ref{#3}}
 
 \newcommand{\lemref}[1]{lemma~\ref{#1}}
 \newcommand{\Lemref}[1]{Lemma~\ref{#1}}
