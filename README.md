@@ -1,6 +1,7 @@
 # How to use
 
 ```latex
+%\newcommand{\briefref}{}  % uncomment for brief reference (not all have been set yet though...)
 \input{general_latex_preamble/macros.tex}
 \input{general_latex_preamble/abbreviations.tex}
 ```

@@ -139,8 +139,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reference short cuts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ifbriefref
+\ifdefined\briefref
     \newcommand{\figlower}{fig.}
     \newcommand{\figupper}{Fig.}
     \newcommand{\figlowerp}{fig.}
@@ -175,7 +174,6 @@
     \newcommand{\eqlowerp}{equations}
     \newcommand{\equpperp}{Equations}
 \fi
-
 
 \newcommand{\figref}[1]{\figlower~\ref{#1}}
 \newcommand{\Figref}[1]{\figupper~\ref{#1}}
