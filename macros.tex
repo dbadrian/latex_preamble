@@ -52,7 +52,7 @@
 %% Vectors, Matrix, Tensors, Arrays
 \newcommand{\vc}[1]{\mathbfit{#1}} % A vector
 \newcommand{\mat}[1]{\mathbfit{#1}} % A matrix
-\newcommand{\ten}[1]{\mathsfbfit{#1}} % A tensor
+\newcommand{\ten}[1]{\mathbf{#1}} % A tensor
 
 %% Special vector-types
 \newcommand{\vct}[1]{\bm{ \mathfrak{#1}}} % A vector with temporal dependency
@@ -135,6 +135,49 @@
 \newcommand{\spc}[2]{\mathbb{#1}^{#2}}
 \newcommand{\rspc}[1]{\R^{#1}}
 
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+% extra math cmds
+%\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+%\newcommand{\img}[2]{\mat{I}_{#1}^{#2}}
+\newcommand{\img}[1]{\mat{I}_{#1}}
+\newcommand{\imga}{\img{A}}
+\newcommand{\imgaaug}{\img{\hat{A}}}
+\newcommand{\imgb}{\img{B}}
+
+\newcommand{\dimg}[1]{\mat{D}_{#1}}
+\newcommand{\dimga}{\dimg{A}}
+\newcommand{\dimgb}{\dimg{B}}
+
+\newcommand{\kp}[1]{\vc{k}_{#1}}
+\newcommand{\kpi}[2]{\vc{k}_{#1}^{#2}}
+\newcommand{\kpf}[1]{\vc{k}_{#1} = (x_{#1}, y_{#1})}
+\newcommand{\kpfi}[2]{\vc{k}_{#1}^{#2} = (x_{#1}^{#2}, y_{#1}^{#2})}
+
+\newcommand{\desc}[1]{\vc{d}_{#1}}
+
+\newcommand{\CCL}{CCL} % In case we want to change how we call it
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Special Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\T}[0]{\mathrm{T}}
+\newcommand{\dist}[2]{D_{#2}\left(#1\right)}
+\newcommand{\loss}[2]{\mathcal{L}_{#1}^{#2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Metrics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\mr}{\mathrm{MR}}
+\DeclareMathOperator{\mrr}{\mathrm{MRR}}
+\newcommand{\hitsat}[1]{\mathrm{HITS@}#1}
+\newcommand{\pckat}[1]{\mathrm{PCK@}#1}
+\newcommand{\hitsatbr}[1]{\mathrm{H@}#1}
+\newcommand{\Set}[1]{\mathcal{#1}}  % set
+\newcommand{\cset}[2]{\Set{C}_{#1}^{#2}} % score function with model name
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reference short cuts
@@ -263,3 +306,5 @@
 \newcommand{\Thmreftwo}[2]{Theorem~\ref{#1} and~\ref{#2}}
 \newcommand{\thmrefthree}[3]{theorem~\ref{#1},~\ref{#2} and~\ref{#3}}
 \newcommand{\Thmrefthree}[3]{Theorem~\ref{#1},~\ref{#2} and \ref{#3}}
+
+
