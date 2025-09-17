@@ -151,10 +151,19 @@
 \newcommand{\dimga}{\dimg{A}}
 \newcommand{\dimgb}{\dimg{B}}
 
-\newcommand{\kp}[1]{\vc{k}_{#1}}
-\newcommand{\kpi}[2]{\vc{k}_{#1}^{#2}}
-\newcommand{\kpf}[1]{\vc{k}_{#1} = (x_{#1}, y_{#1})}
-\newcommand{\kpfi}[2]{\vc{k}_{#1}^{#2} = (x_{#1}^{#2}, y_{#1}^{#2})}
+\newcommand{\kparg}[2]{\vc{k}_{#1}^{#2}}
+\newcommand{\kp}{\vc{k}_{}{}}
+\newcommand{\kpi}{\kparg{}{(i)}}
+\newcommand{\kpa}{\kparg{A}{}}
+\newcommand{\kpb}{\kparg{B}{}}
+\newcommand{\kpai}{\kpi{A}}
+\newcommand{\kpbi}{\kpi{B}}
+\newcommand{\kpfull}[2]{\kparg{#1}{#2} = (x_{#1}^{#2}, y_{#1}^{#2})}
+\newcommand{\kpfi}[1]{\kpi{#1} = (x_{#1}^{(i)}, y_{#1}^{(i)})}
+\newcommand{\kpfa}{\kpa = (x_{A}, y_{A})}
+\newcommand{\kpfb}{\kpa = (x_{B}, y_{B})}
+\newcommand{\kpfai}{\kpai = \left(x_{A}^{(i)}, y_{A}^{(i)}\right)}
+\newcommand{\kpfbi}{\kpbi = \left(x_{B}^{(i)}, y_{B}^{(i)}\right)}
 
 \newcommand{\desc}[1]{\vc{d}_{#1}}
 
@@ -183,39 +192,39 @@
 % Reference short cuts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifdefined\briefref
-    \newcommand{\figlower}{fig.}
-    \newcommand{\figupper}{Fig.}
-    \newcommand{\figlowerp}{fig.}
-    \newcommand{\figupperp}{Fig.}
-    \newcommand{\seclower}{sec.}
-    \newcommand{\secupper}{Sec.}
-    \newcommand{\seclowerp}{sec.}
-    \newcommand{\secupperp}{Sec.}
-    \newcommand{\chaplower}{chap.}
-    \newcommand{\chapupper}{Chap.}
-    \newcommand{\chaplowerp}{chap.}
-    \newcommand{\chapupperp}{Chap.}
-    \newcommand{\eqlower}{eq.}
-    \newcommand{\equpper}{Eq.}
-    \newcommand{\eqlowerp}{eq.}
-    \newcommand{\equpperp}{Eq.}
+	\newcommand{\figlower}{fig.}
+	\newcommand{\figupper}{Fig.}
+	\newcommand{\figlowerp}{fig.}
+	\newcommand{\figupperp}{Fig.}
+	\newcommand{\seclower}{sec.}
+	\newcommand{\secupper}{Sec.}
+	\newcommand{\seclowerp}{sec.}
+	\newcommand{\secupperp}{Sec.}
+	\newcommand{\chaplower}{chap.}
+	\newcommand{\chapupper}{Chap.}
+	\newcommand{\chaplowerp}{chap.}
+	\newcommand{\chapupperp}{Chap.}
+	\newcommand{\eqlower}{eq.}
+	\newcommand{\equpper}{Eq.}
+	\newcommand{\eqlowerp}{eq.}
+	\newcommand{\equpperp}{Eq.}
 \else
-    \newcommand{\figlower}{figure}
-    \newcommand{\figupper}{Figure}
-    \newcommand{\figlowerp}{figures}
-    \newcommand{\figupperp}{Figures}
-    \newcommand{\seclower}{section}
-    \newcommand{\secupper}{Section}
-    \newcommand{\seclowerp}{sections}
-    \newcommand{\secupperp}{Sections}
-    \newcommand{\chaplower}{chapter}
-    \newcommand{\chapupper}{Chapter}
-    \newcommand{\chaplowerp}{chapters}
-    \newcommand{\chapupperp}{Chapters}
-    \newcommand{\eqlower}{equation}
-    \newcommand{\equpper}{Equation}
-    \newcommand{\eqlowerp}{equations}
-    \newcommand{\equpperp}{Equations}
+	\newcommand{\figlower}{figure}
+	\newcommand{\figupper}{Figure}
+	\newcommand{\figlowerp}{figures}
+	\newcommand{\figupperp}{Figures}
+	\newcommand{\seclower}{section}
+	\newcommand{\secupper}{Section}
+	\newcommand{\seclowerp}{sections}
+	\newcommand{\secupperp}{Sections}
+	\newcommand{\chaplower}{chapter}
+	\newcommand{\chapupper}{Chapter}
+	\newcommand{\chaplowerp}{chapters}
+	\newcommand{\chapupperp}{Chapters}
+	\newcommand{\eqlower}{equation}
+	\newcommand{\equpper}{Equation}
+	\newcommand{\eqlowerp}{equations}
+	\newcommand{\equpperp}{Equations}
 \fi
 
 \newcommand{\figref}[1]{\figlower~\ref{#1}}
